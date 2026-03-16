@@ -253,7 +253,7 @@ function SlideFixedDeposit() {
   const [timeLeft, setTimeLeft] = useState(3);
   
   useEffect(() => {
-    let timer: NodeJS.Timeout;
+    let timer: any;
     if (status === 'locked' && timeLeft > 0) {
       timer = setTimeout(() => {
         setTimeLeft(prev => prev - 1);
